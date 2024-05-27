@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeLeaf.org" lang="es">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Facultad - Universidad Nacional de Jujuy</title>
-<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"> 
-</head>
-<body>
-       <script type= "text/javascript" th:src="@{/webjars/bootstrap.bundle.min.js}"></script>
-
-    <header>
-        <nav class="navbar navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">Facultad UNJu</a>
-                <span class="navbar-text">Transformando vidas a través de la educación.</span>
-            </div>
-        </nav>
-    </header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultad - Universidad Nacional de Jujuy</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
             color: #333;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007bff; /* Azul primario de Bootstrap */
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .container {
@@ -61,10 +58,63 @@
             text-decoration: none;
             margin-right: 10px;
         }
+        
+          header {
+        background-color: #007bff;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        font-family: 'Arial Black', sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    
+    .navbar-custom {
+        background-color: #343a40;
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .navbar-custom .navbar-nav .nav-link:hover {
+        color: #ffc107;
+    }
+    
+    .sidebar {
+        background-color: #f8f9fa;
+        padding: 10px;
+    }
+
+    .list-group-item {
+        background-color: #fff;
+        color: #343a40;
+        border: none;
+    }
+
+    .list-group-item:hover {
+        background-color: #f1f1f1;
+        color: #343a40;
+    }
+    
+    
     </style>
 </head>
 
+<body>
+    <header>
+    <!-- Encabezado -->
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Facultad UNJu</a>
+            <span class="navbar-text">Transformando vidas a través de la educación.</span>
+        </div>
+    </nav>
+</header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Barra de Navegación -->
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
@@ -76,44 +126,45 @@
         </div>
     </nav>
 
- 
     <div class="container mt-4">
         <div class="row">
-        
             <aside class="col-lg-3">
+                <!-- Barra lateral -->
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action">Biblioteca</a>
                     <a href="#" class="list-group-item list-group-item-action">Calendario académico</a>
                 </div>
             </aside>
 
-          
             <main class="col-lg-9">
-                <h2>Facultad - Universidad Nacional de Jujuy</h2>
-                <p>La Facultad de ingenieria nos ofrece oportunidades a todos los aspirantes al futuro.</p>
-
-                <h3>Noticias Recientes</h3>
+                <!-- Contenido principal -->
+                <h1>Facultad - Universidad Nacional de Jujuy</h1>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Inscripciones abiertas para una educacion saludable</h5>
-                        <p class="card-text">Incripciones a distintas catedras de clases. </p>
+                        <h3>Noticias Recientes</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">¿Que es la facultad de ingeniera y cuando se fundo?</h5>
+                                <p class="card-text">La Facultad de Ingeniería es una institución académica que forma a profesionales en el campo de la ingeniería, ofreciendo carreras de grado y posgrado en diversas disciplinas como ingeniería civil, ingeniería industrial, ingeniería electrónica, entre otras.
+
+Respecto a la Fundación de la Facultad de Ingeniería de la Universidad Nacional de Jujuy, en Argentina, se fundó en el año 1999. Esta Facultad tiene como objetivo formar profesionales altamente capacitados en diversas ramas de la ingeniería para contribuir al desarrollo tecnológico y científico de la región y del país.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
 
-    <footer class="bg-dark text-white mt-4">
-        <div class="container">
-            <p>Contacto: Dirección - Teléfono - Correo electrónico</p>
-            <p>Redes sociales: <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
-            <p>&copy; 2022 Facultad UNJu. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
+   <footer class="mt-4">
+    <!-- Pie de Página -->
+    <div class="container">
+        <p style="color: #fff;">Contacto: Dirección - Teléfono - Correo electrónico</p>
+        <p style="color: #fff;">Redes sociales: <a href="#" style="color: #fff;">Facebook</a> | <a href="#" style="color: #fff;">Twitter</a></p>
+        <p style="color: #fff;">&copy; 2022 Facultad UNJu. Todos los derechos reservados.</p>
+    </div>
+</footer>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
-</html>
-</body>
 </html>
